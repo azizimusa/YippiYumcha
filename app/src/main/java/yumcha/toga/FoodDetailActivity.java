@@ -25,6 +25,7 @@ import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
 import com.google.gson.Gson;
 import com.nineoldandroids.view.ViewHelper;
 
+import timber.log.Timber;
 import yumcha.toga.databinding.FoodDetailBinding;
 import yumcha.toga.pojo.ListingPojo;
 
@@ -73,6 +74,8 @@ public class FoodDetailActivity extends AppCompatActivity implements ObservableS
             @Override
             public void run() {
                 mScrollView.scrollTo(0, mFlexibleSpaceImageHeight - mActionBarSize);
+
+                Timber.e("yooooo");
 
                 // If you'd like to start from scrollY == 0, don't write like this:
                 //mScrollView.scrollTo(0, 0);

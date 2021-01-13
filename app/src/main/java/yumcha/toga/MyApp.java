@@ -2,6 +2,8 @@ package yumcha.toga;
 
 import android.app.Application;
 
+import timber.log.Timber;
+
 public class MyApp extends Application {
 
     private static MyApp instance;
@@ -17,6 +19,8 @@ public class MyApp extends Application {
         super.onCreate();
 
         instance = this;
+
+        Timber.plant(new Timber.DebugTree());
     }
 
     public MyRetrofit getRestApi() {

@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.toolbar_color));
         TextView tt = getSupportActionBar().getCustomView().findViewById(R.id.title);
         tt.setText("带走");
+
+        getListing();
+
     }
 
     private void initRV(List<ListingPojo> listingPojos) {
@@ -87,10 +90,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        getListing();
-    }
 }
