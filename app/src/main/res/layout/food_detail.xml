@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="vm"
+            type="yumcha.toga.FoodDetailActivity" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flexible_space_image_height"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher" />
+
+            <View
+                android:id="@+id/overlay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flexible_space_image_height" />
+
+            <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/flexible_space_image_height"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="Hehehee" />
+
+                </LinearLayout>
+            </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_standard">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minHeight="?attr/actionBarSize"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/flexible_space_image_height"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:paddingHorizontal="@dimen/activity_horizontal_margin"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:text="Hehehee" />
+
+            <View
+                android:background="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginRight="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/star_big_on"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/star"
+                    android:textSize="12sp"
+                    android:hint="Star"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginRight="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/star_big_on"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:textSize="12sp"
+                    android:hint="Star"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginRight="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/star_big_on"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/voucher"
+                    android:textSize="12sp"
+                    android:hint="Star"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/underVoucher"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <View
+                android:background="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+        </LinearLayout>
+
+<!--        <FrameLayout>-->
+<!--            <ImageView android:id="@+id/image"/>-->
+<!--            <View android:id="@+id/overlay"/>-->
+<!--            <ObservableScrollView android:id="@+id/scroll">-->
+<!--                <LinearLayout android:orientation="vertical">-->
+<!--                    <View/>-->
+<!--                    <TextView/>-->
+<!--                </LinearLayout>-->
+<!--            </ObservableScrollView>-->
+<!--            <LinearLayout android:orientation="vertical">-->
+<!--                <TextView android:id="@+id/title"/>-->
+<!--                <View/>-->
+<!--            </LinearLayout>-->
+<!--            <FloatingActionButton android:id="@+id/fab"/>-->
+<!--        </FrameLayout>-->
+
+    </LinearLayout>
+
+</layout>

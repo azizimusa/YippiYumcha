@@ -5,12 +5,12 @@
     <data></data>
 
     <LinearLayout
+        android:id="@+id/row"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="100dp">
 
         <LinearLayout
-            android:background="@color/cardview_dark_background"
             android:orientation="vertical"
             android:layout_weight="0.4"
             android:layout_width="0dp"
@@ -33,14 +33,14 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp" />
 
-                    <TextView
-                        android:hint="Text Over \nImage"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+<!--                    <TextView-->
+<!--                        android:hint="Text Over \nImage"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"/>-->
 
                 </androidx.cardview.widget.CardView>
 
@@ -51,7 +51,7 @@
 
         <LinearLayout
             android:paddingLeft="10dp"
-            android:background="@android:color/holo_orange_light"
+            android:gravity="center_vertical"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -60,6 +60,8 @@
             <TextView
                 android:id="@+id/title"
                 android:hint="Title"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_marginBottom="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -67,6 +69,9 @@
             <TextView
                 android:id="@+id/subtitle"
                 android:hint="Sub title"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="12sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -136,7 +141,6 @@
             <TextView
                 android:id="@+id/underVoucher"
                 android:textSize="12sp"
-                android:hint="description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
