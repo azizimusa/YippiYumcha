@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".FoodDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait"/>
     </application>
 
